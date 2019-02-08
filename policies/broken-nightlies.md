@@ -17,8 +17,8 @@ A nightly can only be rolled back in the following cases:
 
 A nightly will **not** be rolled back if it's broken by a critical compiler
 bug: those bugs are supposed to be caught by CI, and nightly can have compiler
-regressions anyway. There are no exceptions the policy, even if big projects
-are broken because of this.
+regressions anyway. There are no exceptions, even if big projects are broken
+because of this.
 
 ## What are we going to fix
 

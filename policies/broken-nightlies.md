@@ -15,20 +15,21 @@ response will be in those cases.
   builds for those platforms anyway.
 
 * A nightly will **not** be rolled back if it's broken by a critical compiler
-  bug: those bugs are supposed to be caught by CI, and nightly is supposed to
-  have compiler regressions.
+  bug: those bugs are supposed to be caught by CI, and nightly can have
+  compiler regressions anyway.
 
 There are no exceptions the policy, even if big projects are broken because of
 this.
 
 ## What are we going to fix
 
-When the infra team decides a nightly will be rolled back, we will only fix
-installing the nightly with rustup:
+Once any member of the infra team decides to roll back a nightly under this
+policy we will roll back to the most recent working nightly. The roll back has
+to fix installing the nightly with rustup:
 
 ```
 $ rustup toolchain install nightly
 ```
 
-Other things like the documentation or the artifacts you can manually download
-will not be rolled back.
+It's not required to roll back other things like the documentation or the
+manually downloadable artifacts.

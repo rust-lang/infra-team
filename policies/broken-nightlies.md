@@ -32,4 +32,6 @@ $ rustup toolchain install nightly
 ```
 
 It's not required to roll back other things like the documentation or the
-manually downloadable artifacts.
+manually downloadable artifacts. After the nightly is rolled back we have to
+announce the roll back on the `@rustlang` twitter account and on the status
+page.

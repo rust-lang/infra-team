@@ -6,20 +6,19 @@ response will be in those cases.
 
 ## Which nightly will be rolled back
 
-* A nightly can be rolled back if it contains destructive code, for
-  example if the included compiler deletes all the users files.
+A nightly can only be rolled back in the following cases:
 
-* A nightly can be rolled back if an infra problem caused it to be broken for a
-  big percentage of users on any Tier 1 platform. Issues affecting only lower
-  tier platforms are not worthy of a roll back, since we don't guarantee working
-  builds for those platforms anyway.
+* If it contains destructive code, for example if the included compiler deletes
+  all the users files.
+* If an infra problem caused it to be broken for a big percentage of users on
+  any Tier 1 platform. Issues affecting only lower tier platforms are not
+  worthy of a roll back, since we don't guarantee working builds for those
+  platforms anyway.
 
-* A nightly will **not** be rolled back if it's broken by a critical compiler
-  bug: those bugs are supposed to be caught by CI, and nightly can have
-  compiler regressions anyway.
-
-There are no exceptions the policy, even if big projects are broken because of
-this.
+A nightly will **not** be rolled back if it's broken by a critical compiler
+bug: those bugs are supposed to be caught by CI, and nightly can have compiler
+regressions anyway. There are no exceptions the policy, even if big projects
+are broken because of this.
 
 ## What are we going to fix
 

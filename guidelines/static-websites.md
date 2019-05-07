@@ -6,16 +6,33 @@ and how to setup one.
 
 ## Requirements for hosting websites
 
-* The website must be managed by a Rust team, or be officially affiliated with
-  the project.
-* The website’s content and build tooling must be hosted on a GitHub
+* **The website must be managed by a Rust team, or be officially affiliated with
+  the project.**  
+  The infrastructure team has finite resources and we can't offer hosting for
+  community projects.
+* **The website’s content and build tooling must be hosted on a GitHub
   repository in either the [rust-lang](https://github.com/rust-lang) or
-  [rust-lang-nursery](https://github.com/rust-lang-nursery) organizations.
-* The website must be built and deployed with Travis CI.
-* The website must reach an A+ grade on the
-  [Mozilla Observatory](https://observatory.mozilla.org/).
-* The website can be hosted on either GitHub Pages or Amazon S3 (in the
-  rust-lang account), and must sit behind CloudFront.
+  [rust-lang-nursery](https://github.com/rust-lang-nursery) organizations.**  
+  The infrastructure team must be able to rebuild the website content at any
+  time (for example if we need to switch hosting), and having it hosted on a
+  GitHub repository inside infra-managed organizations is the best way for us
+  to ensure that. Even though we'd prefer for all the repositories to be public
+  it's not a requirement.
+* **The website must be built and deployed with Travis CI.**  
+  We have custom tooling built around hosting static websites on our infra,
+  and at the moment they only work with Travis CI. If you need different CI
+  services we can try to adapt our tools.
+* **The website must reach an A+ grade on the
+  [Mozilla Observatory](https://observatory.mozilla.org/).**  
+  Browsers have multiple security features toggleable only through HTTP
+  response headers, and those features enhance users' privacy and prevent
+  exploits from working. An A+ grade on the Observatory indicates all the
+  important headers are correctly set.
+* **The website can be hosted on either GitHub Pages or Amazon S3 (in the
+  rust-lang account), and must sit behind CloudFront.**  
+  Our custom tooling needs CloudFront to be in front of your website in order
+  to apply extra HTTP headers, and GitHub Pages or Amazon S3 are platforms we
+  vetted for security and reliability.
 
 ## Adding custom headers
 

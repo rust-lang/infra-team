@@ -8,3 +8,7 @@ licenses.
 ## Policies
 
 * [Policy on broken nightlies](policies/broken-nightlies.md)
+
+## Guidelines
+
+* [Rust Infrastructure hosting for static websites](guidelines/static-websites.md)

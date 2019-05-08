@@ -18,10 +18,10 @@ and how to setup one.
   GitHub repository inside infra-managed organizations is the best way for us
   to ensure that. Even though we'd prefer for all the repositories to be public
   it's not a requirement.
-* **The website must be built and deployed with Travis CI.**  
-  We have custom tooling built around hosting static websites on our infra,
-  and at the moment they only work with Travis CI. If you need different CI
-  services we can try to adapt our tools.
+* **The website must be built and deployed with a CI service.**  
+  We have custom tooling built around hosting static websites on our infra, and
+  at the moment they work with Travis CI. If you need different CI services ask
+  us in advance and we'll adapt the tooling to your provider of choice.
 * **The website must reach an A+ grade on the
   [Mozilla Observatory](https://observatory.mozilla.org/).**  
   Browsers have multiple security features toggleable only through HTTP
@@ -79,10 +79,11 @@ Create a CloudFront web distribution and set the following properties:
 - **Origin Protocol Policy:** HTTPS Only
 - **Viewer Protocol Policy:** Redirect HTTP to HTTPS
 - **Lambda Function Association:**
-    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:1
+    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:2
 - **Alternate Domain Names:** your-subdomain-name.rust-lang.org
 - **SSL Certificate:** Custom SSL Certificate
-    - You will need to request the certificate for that subdomain name through ACM
+    - You will need to request the certificate for that subdomain name through
+      ACM (please use the DNS challenge to validate the certificate)
 - **Comment:** your-subdomain-name.rust-lang.org
 
 Wait until the distribution is propagated and take not of its `.cloudfront.net`

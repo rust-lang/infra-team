@@ -28,27 +28,16 @@ and how to setup one.
   response headers, and those features enhance users' privacy and prevent
   exploits from working. An A+ grade on the Observatory indicates all the
   important headers are correctly set.
-* **The website can be hosted on either GitHub Pages or Amazon S3 (in the
-  rust-lang account), and must sit behind CloudFront.**  
-  Our custom tooling needs CloudFront to be in front of your website in order
-  to apply extra HTTP headers, and GitHub Pages or Amazon S3 are platforms we
-  vetted for security and reliability.
+* **The website must be hosted on platforms vetted by the infra team.**  
+  We recommend either GitHub Pages or Amazon S3 (in the rust-lang AWS account)
+  as the hosting and CloudFront as the CDN, but if you need other platforms
+  that's good as long as we consider them secure and reliable.
 
 ## Static websites configuration
 
-To avoid the limitations of the hosting providers we have infra in place to
-enable additional, custom behavior. These behaviors are configured through a
-file named `_rustinfra_config.json` at the root of the generated website
-content.
-
-If you’re using Jekyll as the build tool for the website you also need to
-explicitly whitelist the file in the `_config.yml`, otherwise Jekyll will
-ignore it since it starts with a `_`:
-
-```yaml
-include:
-  - _rustinfra_config.json
-```
+To avoid limitations of some hosting providers we have setup CloudFront to
+enable additional, custom behaviors. These behaviors are configured through a
+file named `website_config.json` at the root of the generated website content.
 
 ### Adding custom headers
 
@@ -56,7 +45,7 @@ One of the requirements for having a static website hosted by the
 infrastructure team is to reach an A+ grade on the [Mozilla
 Observatory](https://observatory.mozilla.org/), and that requires custom
 headers to be set. To setup custom headers you need to add an `headers` section
-to `_rustinfra_config.json`. This example content includes all the headers
+to `website_config.json`. This example content includes all the headers
 needed to reach grade B on the Observatory (to reach grade A+ a Content
 Security Policy is required):
 
@@ -78,7 +67,7 @@ GitHub Pages behaves weirdly when it sits behind CloudFront and it needs to
 issue redirects: since it doesn't know the real domain name it will use
 `http://org-name.github.io/repo-name` as the base of the redirect instead of
 the correct protocol and domain. To prevent this behavior the
-`github_pages_origin` key needs to be added to `_rustinfra_config.json`
+`github_pages_origin` key needs to be added to `website_config.json`
 with the origin base url as the value (excluding the protocol):
 
 ```json
@@ -97,7 +86,7 @@ Create a CloudFront web distribution and set the following properties:
 - **Origin Protocol Policy:** HTTPS Only
 - **Viewer Protocol Policy:** Redirect HTTP to HTTPS
 - **Lambda Function Association:**
-    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:3
+    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:4
 - **Alternate Domain Names:** your-subdomain-name.rust-lang.org
 - **SSL Certificate:** Custom SSL Certificate
     - You will need to request the certificate for that subdomain name through

@@ -34,19 +34,31 @@ and how to setup one.
   to apply extra HTTP headers, and GitHub Pages or Amazon S3 are platforms we
   vetted for security and reliability.
 
-## Adding custom headers
+## Static websites configuration
+
+To avoid the limitations of the hosting providers we have infra in place to
+enable additional, custom behavior. These behaviors are configured through a
+file named `_rustinfra_config.json` at the root of the generated website
+content.
+
+If you’re using Jekyll as the build tool for the website you also need to
+explicitly whitelist the file in the `_config.yml`, otherwise Jekyll will
+ignore it since it starts with a `_`:
+
+```yaml
+include:
+  - _rustinfra_config.json
+```
+
+### Adding custom headers
 
 One of the requirements for having a static website hosted by the
 infrastructure team is to reach an A+ grade on the [Mozilla
 Observatory](https://observatory.mozilla.org/), and that requires custom
-headers to be set. Unfortunately neither GitHub Pages nor Amazon S3 allows
-setting up them, but we have pieces of infrastructure setup to work around the
-limitation.
-
-To setup custom headers a file named `_rustinfra_config.json` needs to be
-included in the generated website. This example content includes all the
-headers needed to reach grade B on the Observatory (to reach grade A+ a Content
-Security Policy needs to be added):
+headers to be set. To setup custom headers you need to add an `headers` section
+to `_rustinfra_config.json`. This example content includes all the headers
+needed to reach grade B on the Observatory (to reach grade A+ a Content
+Security Policy is required):
 
 ```json
 {
@@ -60,13 +72,19 @@ Security Policy needs to be added):
 }
 ```
 
-If you’re using Jekyll as the build tool for the website you also need to
-explicitly whitelist the file in the `_config.yml`, otherwise Jekyll will
-ignore it since it starts with a `_`:
+### Fixing GitHub Pages redirects
 
-```yaml
-include:
-  - _rustinfra_config.json
+GitHub Pages behaves weirdly when it sits behind CloudFront and it needs to
+issue redirects: since it doesn't know the real domain name it will use
+`http://org-name.github.io/repo-name` as the base of the redirect instead of
+the correct protocol and domain. To prevent this behavior the
+`github_pages_origin` key needs to be added to `_rustinfra_config.json`
+with the origin base url as the value (excluding the protocol):
+
+```json
+{
+    "github_pages_origin": "org-name.github.io/repo-name"
+}
 ```
 
 ## Deployment guide
@@ -79,7 +97,7 @@ Create a CloudFront web distribution and set the following properties:
 - **Origin Protocol Policy:** HTTPS Only
 - **Viewer Protocol Policy:** Redirect HTTP to HTTPS
 - **Lambda Function Association:**
-    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:2
+    - **Viewer Response:** arn:aws:lambda:us-east-1:890664054962:function:static-websites:3
 - **Alternate Domain Names:** your-subdomain-name.rust-lang.org
 - **SSL Certificate:** Custom SSL Certificate
     - You will need to request the certificate for that subdomain name through

@@ -78,6 +78,9 @@ with the origin base url as the value (excluding the protocol):
 
 ## Deployment guide
 
+These deployments steps are meant to be executed by a member of the
+infrastructure team since they require access to our AWS account.
+
 ### Configuring AWS
 
 Create a CloudFront web distribution and set the following properties:
@@ -93,8 +96,8 @@ Create a CloudFront web distribution and set the following properties:
       ACM (please use the DNS challenge to validate the certificate)
 - **Comment:** your-subdomain-name.rust-lang.org
 
-Wait until the distribution is propagated and take not of its `.cloudfront.net`
-domain name.
+Wait until the distribution is propagated and take note of its
+`.cloudfront.net` domain name.
 
 Head over to the domain’s Route 53 hosted zone and create a new record set:
 
@@ -126,7 +129,7 @@ yours here](https://travis-ci.com/account/preferences)) to be present. It will
 generate a brand new key, upload it to GitHub and configure Travis CI to use
 it.
 
-To actually deploy the website this snippet needs to be added to your
+To actually deploy the website, this snippet needs to be added to your
 `.travis.yml` (please replace the contents of `RUSTINFRA_DEPLOY_DIR` and
 `RUSTINFRA_CLOUDFRONT_DISTRIBUTION`):
 

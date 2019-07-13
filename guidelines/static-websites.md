@@ -20,8 +20,9 @@ and how to setup one.
   it's not a requirement.
 * **The website must be built and deployed with a CI service.**  
   We have custom tooling built around hosting static websites on our infra, and
-  at the moment they work with Travis CI. If you need different CI services ask
-  us in advance and we'll adapt the tooling to your provider of choice.
+  at the moment they work with Travis CI and Azure Pipelines. If you need
+  different CI services ask us in advance and we'll adapt the tooling to your
+  provider of choice.
 * **The website must reach an A+ grade on the
   [Mozilla Observatory](https://observatory.mozilla.org/).**  
   Browsers have multiple security features toggleable only through HTTP
@@ -111,7 +112,7 @@ example `ci--rust-lang--rust`) as the user name, allow programmatic access to
 it and add it to the `ci-static-websites` IAM group. Then take note of the
 access key id and the secret access key since you’ll need those later.
 
-### Deploying the website
+### Adding deploy keys
 
 To deploy websites we don’t use GitHub tokens (since they don’t have granular
 access scoping) but a deploy key with write access unique for each repository.
@@ -127,7 +128,9 @@ The command requires the `GITHUB_TOKEN` ([you can generate one
 here](https://github.com/settings/tokens)) and the `TRAVIS_TOKEN` ([you can see
 yours here](https://travis-ci.com/account/preferences)) to be present. It will
 generate a brand new key, upload it to GitHub and configure Travis CI to use
-it.
+it if the repo is active there.
+
+### Configuring Travis CI
 
 To actually deploy the website, this snippet needs to be added to your
 `.travis.yml` (please replace the contents of `RUSTINFRA_DEPLOY_DIR` and
@@ -146,3 +149,37 @@ You will also need to set the contents of the `AWS_ACCESS_KEY_ID` and
 credentials of the IAM user you created earlier. The secret access key **must**
 be hidden from the build log, while the access key id should be publicly
 visible.
+
+### Configuring Azure Pipelines
+
+To actually deploy the website, this snippet needs to be added at the top of
+your pipeline's YAML file:
+
+```yaml
+resources:
+  repositories:
+    - repository: rustinfra
+      type: github
+      name: rust-lang/simpleinfra
+      endpoint: rust-lang
+```
+
+Then you can add this steps when you want to execute the deploy (please replace
+the contents of `deploy_dir` and `cloudfront_distribution`):
+
+```yaml
+- template: azure-configs/static-websites.yml@rustinfra
+  parameters:
+    deploy_dir: path/to/output
+    # Optional, only needed if GitHub pages is behind CloudFront
+    cloudfront_distribution: AAAAAAAAAAAAAA
+```
+
+You will also need to set the following environment variables in the pipeline:
+
+* `GITHUB_DEPLOY_KEY`: value outputted when adding the deploy key earlier
+  (**secret**)
+* `AWS_ACCESS_KEY_ID`: access key ID of the IAM user allowed to invalidate
+  CloudFront (public)
+* `AWS_SECRET_ACCESS_KEY`: access key of the IAM user allowed to invalidate
+  CloudFront (**secret**)

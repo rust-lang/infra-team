@@ -12,3 +12,8 @@ licenses.
 ## Guidelines
 
 * [Rust Infrastructure hosting for static websites](guidelines/static-websites.md)
+
+## Documentation
+
+* Services hosted by the Infrastructure Team:
+  * [docs.rs](docs/services/docs-rs.md)

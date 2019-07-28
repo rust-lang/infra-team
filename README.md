@@ -17,3 +17,5 @@ licenses.
 
 * Services hosted by the Infrastructure Team:
   * [docs.rs](docs/services/docs-rs.md)
+* Hosts managed by the Infrastructure Team:
+  * [rust-bots](docs/hosts/rust-bots.md)

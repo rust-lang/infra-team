@@ -1,4 +1,10 @@
-## Adding a new domain
+# rust-bots
+
+* FQDN: `bots.infra.rust-lang.org` (behind the bastion)
+
+## Common maintenance procedures
+
+### Adding a new domain
 
 First, edit `sudo vim /etc/nginx/nginx.conf` to edit the nginx configuration to add the domain.
 

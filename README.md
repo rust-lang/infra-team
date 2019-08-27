@@ -16,6 +16,7 @@ licenses.
 ## Documentation
 
 * Services hosted by the Infrastructure Team:
+  * [Discord moderation bot](docs/services/discord-mods-bot.md)
   * [docs.rs](docs/services/docs-rs.md)
 * Hosts managed by the Infrastructure Team:
   * [rust-bots](docs/hosts/rust-bots.md)

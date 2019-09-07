@@ -57,3 +57,14 @@ PostgreSQL and then docs.rs:
 $ sudo systemctl restart postgresql
 $ sudo systemctl restart docs.rs
 ```
+
+### Kill stuck builds
+
+Sometimes a build could get stuck, clogging up the queue. You first need to
+remove the crate that failed from the queue (see [the related section of this
+doc](#temporarily-remove-a-crate-from-the-queue)), and then you can execute
+this command to kill all stuck processes:
+
+```
+$ unstuck-build
+```

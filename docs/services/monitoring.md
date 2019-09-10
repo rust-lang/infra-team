@@ -1,8 +1,10 @@
 # Monitoring
 
-* Hosted on: `monitoring.infra.rust-lang.org` (behind the bastion)
+* Hosted on: `monitoring.infra.rust-lang.org` (behind the bastion -- [how to connect][bastion-connect])
 * Maintainers: [pietroalbini], infra team
 * Public URL: [grafana.rust-lang.org](https://grafana.rust-lang.org)
+* [Ansible playbook][ansible-playbook] to deploy this server.
+* [Instance metrics][grafana-instance] (only available to infra team members).
 
 ## Service configuration
 
@@ -74,7 +76,10 @@ team members.
 * [Prometheus documentation][prometheus-docs]
 * [Grafana documentation][grafana-docs]
 
+[bastion-connect]: https://github.com/rust-lang/infra-team/blob/master/docs/hosts/bastion.md#logging-into-servers-through-the-bastion
 [pietroalbini]: https://github.com/pietroalbini
+[ansible-playbook]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/playbooks/bastion.yml
+[grafana-instance]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=monitoring.infra.rust-lang.org:9100
 [Prometheus]: https://prometheus.io
 [Alertmanager]: https://prometheus.io/docs/alerting/alertmanager/
 [Grafana]: https://grafana.com

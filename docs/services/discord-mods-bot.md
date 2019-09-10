@@ -1,7 +1,7 @@
 # Discord moderation bot
 
 * Source code: [rust-lang-nursery/discord-mods-bot][repo]
-* Hosted on: `bots.infra.rust-lang.org` (behind the bastion)
+* Hosted on: [`bots.infra.rust-lang.org`][rust-bots] (behind the bastion -- [how to connect][bastion-connect])
 * Maintainers: [technetos]
 
 ## Service configuration
@@ -34,6 +34,8 @@ into the server and run this command:
 The command might also redeploy other services hosted on the same server.
 
 [repo]: https://github.com/rust-lang-nursery/discord-mods-bot
+[rust-bots]: https://github.com/rust-lang/infra-team/blob/master/docs/hosts/rust-bots.md
+[bastion-connect]: https://github.com/rust-lang/infra-team/blob/master/docs/hosts/bastion.md#logging-into-servers-through-the-bastion
 [devportal]: https://discordapp.com/developers/applications/615806512790503424
 [technetos]: https://github.com/technetos
 [pietroalbini]: https://github.com/pietroalbini

@@ -2,7 +2,7 @@
 
 * FQDN: `bastion.infra.rust-lang.org`
 * [Ansible playbook][ansible] to deploy this server.
-* [Metrics][grafana] (only available to infra team members).
+* [Instance metrics][grafana] (only available to infra team members).
 
 ## Logging into servers through the bastion
 

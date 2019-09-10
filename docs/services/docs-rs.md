@@ -1,12 +1,10 @@
 # docs.rs
 
 * Source code: [rust-lang/docs.rs][repo]
-* Hosted on: `docsrs.infra.rust-lang.org` (behind the bastion)
+* Hosted on: `docsrs.infra.rust-lang.org` (behind the bastion -- [how to connect][bastion-connect])
 * Maintainers: [onur][onur], [QuietMisdreavus][QuietMisdreavus]
-
-[repo]: https://github.com/rust-lang/docs.rs
-[onur]: https://github.com/onur
-[QuietMisdreavus]: https://github.com/QuietMisdreavus
+* [Instance metrics][grafana-instance] (only available to infra team members).
+* [Application metrics][grafana-app] (only available to infra team members).
 
 ## Common maintenance procedures
 
@@ -68,3 +66,10 @@ this command to kill all stuck processes:
 ```
 $ unstuck-build
 ```
+
+[repo]: https://github.com/rust-lang/docs.rs
+[grafana-instance]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=docsrs.infra.rust-lang.org:9100
+[grafana-app]: https://grafana.rust-lang.org/d/-wWFg2cZz/docs-rs?orgId=1
+[bastion-connect]: https://github.com/rust-lang/infra-team/blob/master/docs/hosts/bastion.md#logging-into-servers-through-the-bastion
+[onur]: https://github.com/onur
+[QuietMisdreavus]: https://github.com/QuietMisdreavus

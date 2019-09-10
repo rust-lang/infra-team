@@ -20,4 +20,5 @@ licenses.
   * [docs.rs](docs/services/docs-rs.md)
   * [Monitoring](docs/services/monitoring.md)
 * Hosts managed by the Infrastructure Team:
+  * [Bastion server](docs/hosts/bastion.md)
   * [rust-bots](docs/hosts/rust-bots.md)

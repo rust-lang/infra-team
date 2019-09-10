@@ -78,7 +78,7 @@ team members.
 
 [bastion-connect]: https://github.com/rust-lang/infra-team/blob/master/docs/hosts/bastion.md#logging-into-servers-through-the-bastion
 [pietroalbini]: https://github.com/pietroalbini
-[ansible-playbook]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/playbooks/bastion.yml
+[ansible-playbook]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/playbooks/monitoring.yml
 [grafana-instance]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=monitoring.infra.rust-lang.org:9100
 [Prometheus]: https://prometheus.io
 [Alertmanager]: https://prometheus.io/docs/alerting/alertmanager/

@@ -32,41 +32,6 @@ query:
 UPDATE queue SET attempt = 0 WHERE name = '<CRATE_NAME>';
 ```
 
-### Cleaning up the target directory
-
-Cleaning up the target directory is the best way to reclaim disk space on the
-instance, in the event it was full. To do that you need to first open a shell
-inside the container:
-
-```
-$ sudo lxc-attach -n docs-rs-container bash
-```
-
-...and then inside the shell you can remove all the target directory's contents:
-
-```
-$ rm -rf /home/cratesfyi/cratesfyi/*
-```
-
-If docs.rs went down due to the full disks you'll also want to first restart
-PostgreSQL and then docs.rs:
-
-```
-$ sudo systemctl restart postgresql
-$ sudo systemctl restart docs.rs
-```
-
-### Kill stuck builds
-
-Sometimes a build could get stuck, clogging up the queue. You first need to
-remove the crate that failed from the queue (see [the related section of this
-doc](#temporarily-remove-a-crate-from-the-queue)), and then you can execute
-this command to kill all stuck processes:
-
-```
-$ unstuck-build
-```
-
 [repo]: https://github.com/rust-lang/docs.rs
 [grafana-instance]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=docsrs.infra.rust-lang.org:9100
 [grafana-app]: https://grafana.rust-lang.org/d/-wWFg2cZz/docs-rs?orgId=1

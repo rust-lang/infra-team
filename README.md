@@ -5,6 +5,12 @@ This repository is the home of the Rust Infrastructure team.
 Contents of this repository are dual-licensed under the MIT and the Apache 2.0
 licenses.
 
+## Meeting minutes
+
+Minutes of the team's meetings are available on this repo:
+
+* [Weekly meetings](minutes/weekly-meetings)
+
 ## Policies
 
 * [Policy on broken nightlies](policies/broken-nightlies.md)

@@ -51,15 +51,28 @@ IP address](#updating-the-whitelisted-ips).
 
 ### Updating the whitelisted IPs
 
-To change the IP whitelist go to the [EC2 security groups
-console][ec2-security-groups] and click on the `rust-prod-bastion` security
-group. Its details should appear on the bottom: go to the "Inbound" tab and
-click "Edit". Make the changes and click "Save".
+Due to privacy reasons, all the static IP addresses of team members with
+access to the bastion are stored on [AWS SSM Parameter Store][ssm] instead of
+public git repositories.
 
-Make sure every rule has the person who owns the IP address in the description!
+To add or update an IP address you can run this command (taking care of
+replacing `USERNAME` and `IP_ADDRESS` with the proper values):
+
+```
+aws ssm put-parameter --type String --name "/prod/bastion/allowed-ips/USERNAME" --value "IP_ADDRESS/32"
+```
+
+If you're adding an IP address instead of updating it, you'll also need to add
+the username to the list in [`terraform/services.tf`][allowed-ips] (key
+`allowed_users` in the `service_bastion` module).
+
+Once you made all the needed changes you wanted you can [apply the Terraform
+configuration][terraform-apply] to deploy the changes.
 
 [ansible]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/playbooks/bastion.yml
 [grafana]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=bastion.infra.rust-lang.org:9100
 [keys]: https://github.com/rust-lang/simpleinfra/tree/master/ansible/roles/common/files/ssh-keys
 [ansible-apply]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/README.md#executing-a-playbook
-[ec2-security-groups]: https://us-west-1.console.aws.amazon.com/ec2/v2/home?region=us-west-1#SecurityGroups:sort=tag:Name
+[ssm]: https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html
+[allowed-ips]: https://github.com/rust-lang/simpleinfra/blob/master/terraform/services.tf
+[terraform-apply]: https://github.com/rust-lang/simpleinfra/tree/master/terraform#applying-the-configuration

@@ -2,6 +2,7 @@
 
 * FQDN: `bastion.infra.rust-lang.org`
 * [Ansible playbook][ansible] to deploy this server.
+* [Terraform configuration][terraform] to create AWS resources.
 * [Instance metrics][grafana] (only available to infra team members).
 
 ## Logging into servers through the bastion
@@ -68,6 +69,7 @@ Once you made all the needed changes you wanted you need to [apply the
 Terraform configuration][terraform-apply].
 
 [ansible]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/playbooks/bastion.yml
+[terraform]: https://github.com/rust-lang/simpleinfra/tree/master/terraform/services/bastion
 [grafana]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=bastion.infra.rust-lang.org:9100
 [keys]: https://github.com/rust-lang/simpleinfra/tree/master/ansible/roles/common/files/ssh-keys
 [ansible-apply]: https://github.com/rust-lang/simpleinfra/blob/master/ansible/README.md#executing-a-playbook

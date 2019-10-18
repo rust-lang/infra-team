@@ -22,6 +22,7 @@ Minutes of the team's meetings are available on this repo:
 ## Documentation
 
 * Services hosted by the Infrastructure Team:
+  * [Crater agents](docs/services/crater-agents.md)
   * [Discord moderation bot](docs/services/discord-mods-bot.md)
   * [docs.rs](docs/services/docs-rs.md)
   * [Monitoring](docs/services/monitoring.md)

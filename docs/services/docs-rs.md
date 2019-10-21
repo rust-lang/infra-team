@@ -53,6 +53,22 @@ systemctl restart docs.rs
 To return to the latest nightly simply remove the environment variable and
 restart docs.rs again.
 
+### Adding all the crates failed after a date back in the queue
+
+After an outage you might want to add all the failed builds back to the queue.
+To do that, log into the machine and open a PostgreSQL shell with:
+
+```
+psql
+```
+
+Then you can run this SQL query to add all the crates failed after `YYYY-MM-DD
+HH:MM:SS` back in the queue:
+
+```
+UPDATE queue SET attempt = 0 WHERE attempt >= 5 AND build_time > 'YYYY-MM-DD HH:MM:SS';
+```
+
 [repo]: https://github.com/rust-lang/docs.rs
 [grafana-instance]: https://grafana.rust-lang.org/d/rpXrFfKWz/instance-metrics?orgId=1&var-instance=docsrs.infra.rust-lang.org:9100
 [grafana-app]: https://grafana.rust-lang.org/d/-wWFg2cZz/docs-rs?orgId=1

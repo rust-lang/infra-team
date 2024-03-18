@@ -1,31 +1,15 @@
-# Rust Infrastructure team
+# Rust Infrastructure Team
 
-This repository is the home of the Rust Infrastructure team.
+This repository is the home of the [Rust Infrastructure Team]. It contains
+internal documentation about the team's processes and services.
 
-Contents of this repository are dual-licensed under the MIT and the Apache 2.0
-licenses.
+## Meetings
 
-## Meeting minutes
+- [Weekly Team Meeting](./meetings/README.md)
 
-Minutes of the team's meetings are available on this repo:
+## License
 
-* [Weekly meetings](minutes/weekly-meetings)
+The contents of this repository are dual-licensed under the terms of the
+[MIT](./LICENSE-MIT) and the [Apache 2.0](./LICENSE-APACHE) licenses.
 
-## Policies
-
-* [Policy on broken nightlies](policies/broken-nightlies.md)
-
-## Guidelines
-
-* [Rust Infrastructure hosting for static websites](guidelines/static-websites.md)
-
-## Documentation
-
-* Services hosted by the Infrastructure Team:
-  * [Crater agents](docs/services/crater-agents.md)
-  * [Discord moderation bot](docs/services/discord-mods-bot.md)
-  * [docs.rs](docs/services/docs-rs.md)
-  * [Monitoring](docs/services/monitoring.md)
-* Hosts managed by the Infrastructure Team:
-  * [Bastion server](docs/hosts/bastion.md)
-  * [rust-bots](docs/hosts/rust-bots.md)
+[rust infrastructure team]: https://www.rust-lang.org/governance/teams/infra

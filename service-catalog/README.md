@@ -8,6 +8,10 @@ The documentation in the service catalog is inspired by the [Diataxis]
 framework, which proposes a systematic approach to categorize into tutorials,
 how-to guides, explanations, and reference documentation.
 
+## For Contributors
+
+- [dev-desktops](./dev-desktops/README.md)
+
 ## External Services
 
 - [Fastly](./fastly/README.md)

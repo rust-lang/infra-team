@@ -90,6 +90,19 @@ nvme0n1      259:0    0    2T  0 disk
 └─nvme0n1p15 259:2    0   99M  0 part /boot/efi
 ```
 
+Also check with `df` if the filesystem has been resized:
+
+```shell
+df -h
+```
+
+If the filesystem has not been resized, you can use the `resize2fs` command to
+resize it manually:
+
+```shell
+resize2fs /dev/root
+```
+
 ## Azure
 
 On Azure, only one step is necessary since the filesystem is automatically

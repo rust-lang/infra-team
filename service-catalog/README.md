@@ -14,6 +14,7 @@ how-to guides, explanations, and reference documentation.
 
 ## External Services
 
+- [Datadog](./datadog/README.md)
 - [Fastly](./fastly/README.md)
 
 [diataxis]: https://diataxis.fr/

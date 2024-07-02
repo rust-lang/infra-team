@@ -9,6 +9,7 @@ User-facing documentation can be found in the [Forge].
 ## How-to Guides
 
 - [How to increase the disk size](./how-to-increase-disk-size.md)
+- [How to update system](./how-to-update-system.md)
 
 [cloud compute program]: https://foundation.rust-lang.org/news/2021-11-16-news-announcing-cloud-compute-initiative/
 [forge]: https://forge.rust-lang.org/infra/docs/dev-desktop.html

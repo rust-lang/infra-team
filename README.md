@@ -30,6 +30,19 @@ flowchart TD
 
 <!-- markdownlint-enable MD013 -->
 
+## Roadmap
+
+You can see what we are working on and our backlog in our
+[planning](https://github.com/orgs/rust-lang/projects/24/views/1)
+
+## Repositories
+
+Some of the repositories we work on:
+
+- [simpleinfra](https://github.com/rust-lang/simpleinfra)
+- [bors](https://github.com/rust-lang/bors)
+- [crater](https://github.com/rust-lang/crater)
+
 ## Meetings
 
 - [Weekly Team Meeting](./meetings/README.md)

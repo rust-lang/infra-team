@@ -10,6 +10,13 @@ We use the following features:
 - Platform-level metrics from AWS and Fastly
 - Log pipelines for logs from our CDNs, applications, and servers
 
+## Integrations
+
+We use the following integrations:
+
+- [aws](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/datadog-aws)
+- [fastly](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/datadog-fastly)
+
 ## Explanations
 
 - [About Permissions](./about-permissions.md)

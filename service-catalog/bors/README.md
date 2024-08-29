@@ -22,13 +22,15 @@ pipeline:
 
 These are the versions we need to keep up-to-date:
 
-- Operating system: Ubuntu. Version specified in the
-  [Dockerfile]
+- Ubuntu version specified in the [Dockerfile]
 - Rust toolchain: specified in the [Dockerfile]
 - Rust dependencies: specified in the
   [Cargo.toml](https://github.com/rust-lang/bors/blob/main/Cargo.toml)
 - PostgreSQL: version specified in
   [Terraform](https://github.com/rust-lang/simpleinfra/blob/master/terragrunt/modules/bors/main.tf)
+- GitHub Actions: specified in the
+  [workflows](https://github.com/rust-lang/bors/tree/main/.github/workflows)
+  directory
 
 No automation is in place as of August 2024.
 

@@ -1,11 +1,14 @@
 # Bors
 
-The bors [module](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/bors)
-contains the infrastructure of [bors](https://github.com/rust-lang/bors), the Rust rewrite of
+[Bors](https://github.com/rust-lang/bors) is the Rust rewrite of
 [homu](https://github.com/rust-lang/homu).
 
-`Homu` is deployed in the legacy account, while `bors` is deployed in the
-`bors-staging` and `bors-prod` account, depending on the environment.
+- The bors infrastructure is managed in the
+  [bors](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/bors)
+  terragrunt module and it's deployed in the
+  `bors-staging` and `bors-prod` account, depending on the environment.
+- The `homu` infrastructure is managed in the
+  [terraform/bors](https://github.com/rust-lang/simpleinfra/tree/master/terraform/bors) module and it is deployed in the legacy account.
 
 Bors is deployed as a [Fargate](https://aws.amazon.com/fargate/) service
 ([ECS](https://aws.amazon.com/ecs/)) in the `us-east-2` region.

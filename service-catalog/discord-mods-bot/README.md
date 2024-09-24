@@ -5,7 +5,8 @@ is a bot used by the moderation team to manage the Rust Discord server.
 
 The bot is managed in the
 [terraform/discord-mods-bot](https://github.com/rust-lang/simpleinfra/tree/master/terraform/discord-mods-bot)
-module.
+module and uses the `discord-mods-bot` database of
+[terraform/rds-databases](https://github.com/rust-lang/simpleinfra/tree/master/terraform/rds-databases)
 
 ## Versions
 

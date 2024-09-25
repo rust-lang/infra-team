@@ -11,7 +11,7 @@ These threats were identified in a [threat model] for the project's infrastructu
 While we have multiple measures in place to prevent accidental deletion of Rust releases or crates in AWS,
 e.g. bucket replication to a different region and restricted access, our current setup does not sufficiently protect us against a few threats:
 
-1. _AWS Account compromise_. The [threat model] for Rust's infrastructure, created by the Rust Foundation's security engineer, highlights the risk of an AWS account compromise.
+1. _AWS Account compromise_. The [threat model] highlights the risk of an AWS account compromise.
    If a malicious actor was able to gain administrator access to the AWS account of one of the [infra-admins],
    they could bypass a lot of safe guards and delete data.
 2. _AWS Account deletion_. AWS could accidentally delete our account, resulting in the possible deletion of data and backups.

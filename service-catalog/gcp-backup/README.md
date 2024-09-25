@@ -34,7 +34,7 @@ We limit admin access to the GCP backups to two members of the Rust Foundation f
 
 - _ensure a strong separation of access_: as explained in the first [motivation](#Motivation), the GCP admins should be different from the AWS admins.
   This means we can't give admin access to any of the `infra-admins`.
-- _accountability_: the Rust Foundation employees are accountable for their actions, which means they can't delete the backups intentionally without breaking the law.
+- _accountability_: The Rust Foundation employees have signed an employment contract and can be legally liable for malicious actions.
 
 People with admin access to the GCP account:
 

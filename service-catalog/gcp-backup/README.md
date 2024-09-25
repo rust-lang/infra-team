@@ -4,7 +4,7 @@
 
 In GCP (Google Cloud Platform) we keep offsite backups for both Rust releases and crates
 to protect us against security threats that could involve losing crates or releases.
-These threats were identified in the [threat model].
+These threats were identified in a [threat model] for the project's infrastructure, created by the Rust Foundation's security engineer Walter.
 
 ## Motivation
 

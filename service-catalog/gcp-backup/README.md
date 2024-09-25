@@ -15,7 +15,7 @@ e.g. bucket replication to a different region and restricted access, our current
    If a malicious actor was able to gain administrator access to the AWS account of one of the [infra-admins],
    they could bypass a lot of safe guards and delete data.
 2. _AWS Account deletion_. AWS could accidentally delete our account, resulting in the possible deletion of data and backups.
-   For example, something similar happened at [Google](https://arstechnica.com/gadgets/2024/05/google-cloud-accidentally-nukes-customer-account-causes-two-weeks-of-downtime/) recently.
+   Something similar happened to a customer on [GCP](https://arstechnica.com/gadgets/2024/05/google-cloud-accidentally-nukes-customer-account-causes-two-weeks-of-downtime/) in 2024.
 
 - To mitigate threat 1, the new backup needs to have separate admin access.
 - To mitigate threat 2, the new backup needs to be in a separate cloud environment.

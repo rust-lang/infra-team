@@ -83,7 +83,7 @@ For the objects:
 - Set the [storage class](https://cloud.google.com/storage/docs/storage-classes) to "archive" for all buckets.
   This is the cheapest class for infrequent access.
 - Enable [object-versioning](https://cloud.google.com/storage/docs/object-versioning) and [soft-delete](https://cloud.google.com/storage/docs/soft-delete),
-  so that we can recover updates and deletes so that we can recover updates and deletes.
+  so that we can recover updates and deletes.
 
 We use [Storage Transfer](https://cloud.google.com/storage-transfer/docs/overview) to automatically transfer the content of the s3 bucket into the Google Object Storage.
 This is a service managed by Google. We'll use it to download the S3 buckets from cloudfront to perform a daily incremental transfer. The transfers only move files that are new, updated, or deleted since the last transfer, minimizing the amount of data that needs to be transferred.

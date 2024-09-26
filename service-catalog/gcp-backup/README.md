@@ -57,7 +57,7 @@ In this case we need to add a new admin to the GCP account.
 - In case our data in AWS is deleted, the `infra-admin` team can restore it by:
   - copying the data from GCP to AWS using the GCP read-only access.
   - restoring the `crates-io-index` bucket from the `db-dump` stored in the `crates-io` bucket. Use [this](https://github.com/rust-lang/crates.io/blob/e0bb0049daa12f5362def463b04febd6c036d315/src/worker/jobs/git.rs#L19-L129) code.
-- If the GCP synchronization mechanism breaks, the Infra team can raise a PR to fix the terraform configuration and a GCP admin can apply it.
+- If the GCP synchronization mechanism breaks, the Infrastructure team can raise a PR to fix the terraform configuration and a GCP admin can apply it.
 
 ### New threat model 🦹
 

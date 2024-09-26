@@ -1,4 +1,4 @@
-# GCP backup
+# Rust assets backup
 
 ## Summary
 

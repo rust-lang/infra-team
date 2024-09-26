@@ -80,53 +80,21 @@ Here we have one Google [Object Storage](https://cloud.google.com/storage?hl=en)
 
 For the objects:
 
-- Set the [storage class](https://cloud.google.com/storage/docs/storage-classes) to "archive" for all buckets.
+- The [storage class](https://cloud.google.com/storage/docs/storage-classes) is set to "archive" for all buckets.
   This is the cheapest class for infrequent access.
-- Enable [object-versioning](https://cloud.google.com/storage/docs/object-versioning) and [soft-delete](https://cloud.google.com/storage/docs/soft-delete),
+- [object-versioning](https://cloud.google.com/storage/docs/object-versioning) and [soft-delete](https://cloud.google.com/storage/docs/soft-delete) are enabled,
   so that we can recover updates and deletes.
 
 We use [Storage Transfer](https://cloud.google.com/storage-transfer/docs/overview) to automatically transfer the content of the s3 bucket into the Google Object Storage.
 This is a service managed by Google. We'll use it to download the S3 buckets from CloudFront to perform a daily incremental transfer. The transfers only move files that are new, updated, or deleted since the last transfer, minimizing the amount of data that needs to be transferred.
 
-### Monitoring 🕵️
+## Explanations
 
-To check that the backups are working:
+- [FAQ](./faq.md)
 
-- Ensure the number of files and the size of the GCP buckets is the same as the respective AWS buckets by looking at the metrics
-- Ensure that only the authorized people have access to the account
+## How-to Guides
 
-You can also run the following test:
-
-- Upload a file in an AWS S3 bucket and check that it appears in GCP.
-- Edit the file in AWS and check that you can recover the previous version from GCP.
-- Delete the in AWS and check that you can recover all previous versions from GCP.
-
-In the future, we might want to create alerts in:
-
-- _Datadog_: to monitor if the transfer job fails.
-- _Wiz_: to monitor if the access control changes.
-
-### Backup maintenance 🧹
-
-If a crate version is deleted from the crates-io bucket (e.g. for GDPR reasons), an admin needs to delete it from the GCP bucket as well.
-Even though the delete will propagate to GCP, the `soft-delete` feature will preserve the data, so we need to delete it manually.
-
-### FAQ 🤔
-
-#### Do we need a multi-region backup for the object storage?
-
-No. [Multi-region](https://cloud.google.com/storage/docs/availability-durability#cross-region-redundancy) only helps if we want to serve this data real-time and we want to have a fallback mechanism if a GCP region fails. We just need this object storage for backup purposes, so we don't need to pay more 👍
-
-#### Why did you choose the `europe-west1` GCP region?
-
-It's far from the `us-west-1` region where the AWS S3 buckets are located. This protects us from geographical disasters.
-The con is that the latency of the transfer job is higher when compared to a region in the US.
-Also, the cost calculator indicates that this regions has a "Low CO2" and it's among the cheapest regions.
-
-#### Why GCP?
-
-Both the Rust Foundation and the Rust project have a good working relationship with Google, and it is where the Rust Foundation's Security Initiative hosts its infrastructure.
-Due to the good collaboration with Google, we expect that we can cover the costs of the backup with credits provided by Google.
+- [Maintenance](./maintenance.md)
 
 [infra-admins]: https://github.com/rust-lang/team/blob/master/teams/infra-admins.toml
 [threat model]: https://docs.google.com/document/d/10Qlf8lk7VbpWhA0wHqJj4syYuUVr8rkGVM-k2qkb0QE

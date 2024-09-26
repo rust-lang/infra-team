@@ -57,7 +57,7 @@ In this case we need to add a new admin to the GCP account.
 - In case our data in AWS is deleted, the `infra-admin` team can restore it by:
   - copying the data from GCP to AWS using the GCP read-only access.
   - restoring the `crates-io-index` bucket from the `db-dump` stored in the `crates-io` bucket. Use [this](https://github.com/rust-lang/crates.io/blob/e0bb0049daa12f5362def463b04febd6c036d315/src/worker/jobs/git.rs#L19-L129) code.
-- If the GCP synchronization mechanism breaks, the Infrastructure team can raise a PR to fix the terraform configuration and a GCP admin can apply it.
+- If the GCP synchronization mechanism breaks, the Infrastructure team can raise a PR to fix the Terraform configuration and a GCP admin can apply it.
 
 ### New threat model 🦹
 
@@ -75,8 +75,8 @@ The accidental account deletion is not a threat anymore because if either AWS or
 The account where we store the backup is called `rust-backup`. It contains two GCP projects: `backup-prod` and `backup-staging`.
 Here we have one Google [Object Storage](https://cloud.google.com/storage?hl=en) in the `europe-west1` (Belgium) region for the following AWS S3 buckets:
 
-- `crates-io`. Cloudfront URL: `cloudfront-static.crates.io`. It contains the crates published by the Rust community.
-- `static-rust-lang-org`. Cloudfront Url: `cloudfront-static.rust-lang.org`. Among other things, it contains the Rust releases.
+- `crates-io`. CloudFront URL: `cloudfront-static.crates.io`. It contains the crates published by the Rust community.
+- `static-rust-lang-org`. CloudFront Url: `cloudfront-static.rust-lang.org`. Among other things, it contains the Rust releases.
 
 For the objects:
 
@@ -86,7 +86,7 @@ For the objects:
   so that we can recover updates and deletes.
 
 We use [Storage Transfer](https://cloud.google.com/storage-transfer/docs/overview) to automatically transfer the content of the s3 bucket into the Google Object Storage.
-This is a service managed by Google. We'll use it to download the S3 buckets from cloudfront to perform a daily incremental transfer. The transfers only move files that are new, updated, or deleted since the last transfer, minimizing the amount of data that needs to be transferred.
+This is a service managed by Google. We'll use it to download the S3 buckets from CloudFront to perform a daily incremental transfer. The transfers only move files that are new, updated, or deleted since the last transfer, minimizing the amount of data that needs to be transferred.
 
 ### Monitoring 🕵️
 

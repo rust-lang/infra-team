@@ -1,11 +1,14 @@
 # Bors
 
-The bors [module](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/bors)
-contains the infrastructure of [bors](https://github.com/rust-lang/bors), the Rust rewrite of
+[Bors](https://github.com/rust-lang/bors) is the Rust rewrite of
 [homu](https://github.com/rust-lang/homu).
 
-`Homu` is deployed in the legacy account, while `bors` is deployed in the
-`bors-staging` and `bors-prod` account, depending on the environment.
+- The bors infrastructure is managed in the
+  [bors](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/bors)
+  terragrunt module and it's deployed in the
+  `bors-staging` and `bors-prod` account, depending on the environment.
+- The `homu` infrastructure is managed in the
+  [terraform/bors](https://github.com/rust-lang/simpleinfra/tree/master/terraform/bors) module and it is deployed in the legacy account.
 
 Bors is deployed as a [Fargate](https://aws.amazon.com/fargate/) service
 ([ECS](https://aws.amazon.com/ecs/)) in the `us-east-2` region.
@@ -22,13 +25,15 @@ pipeline:
 
 These are the versions we need to keep up-to-date:
 
-- Operating system: Ubuntu. Version specified in the
-  [Dockerfile]
+- Ubuntu version specified in the [Dockerfile]
 - Rust toolchain: specified in the [Dockerfile]
 - Rust dependencies: specified in the
   [Cargo.toml](https://github.com/rust-lang/bors/blob/main/Cargo.toml)
 - PostgreSQL: version specified in
   [Terraform](https://github.com/rust-lang/simpleinfra/blob/master/terragrunt/modules/bors/main.tf)
+- GitHub Actions: specified in the
+  [workflows](https://github.com/rust-lang/bors/tree/main/.github/workflows)
+  directory
 
 No automation is in place as of August 2024.
 

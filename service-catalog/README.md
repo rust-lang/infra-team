@@ -10,7 +10,24 @@ how-to guides, explanations, and reference documentation.
 
 ## For Contributors
 
+- [bastion](./bastion/README.md)
+- [bors](./bors/README.md)
+- [crater](./crater/README.md)
+- [crates-io](./crates-io/README.md)
 - [dev-desktops](./dev-desktops/README.md)
+- [discord-mods-bot](./discord-mods-bot/README.md)
+- [dns](./dns/README.md)
+- [docs-rs](./dns/README.md)
+- [monitorbot](./monitorbot/README.md)
+- [playground](./playground/README.md)
+- [releases](./releases/README.md)
+- [rust-ci](./rust-ci/README.md)
+- [rust-forge](./rust-forge/README.md)
+- [rust-log-analyzer](./rust-log-analyzer/README.md)
+- [rustc-perf](./rustc-perf/README.md)
+- [rustup](./rustup/README.md)
+- [sync-team](./sync-team/README.md)
+- [team-member-access](./team-member-access/README.md)
 
 ## External Services
 

@@ -45,18 +45,9 @@ For example, to check if the bot is alive you can write this comment:
 
 And the bot will reply to you.
 
-## Versions
+## How-to Guides
 
-These are the versions we need to keep up-to-date:
+[How to update Crater](./how-to-update-crater.md)
 
-- Ubuntu version specified in the [Dockerfile]
-- Cargo dependencies: specified in the [Cargo.lock]
-- GitHub Actions: specified in the [workflows] directory
-- Ubuntu image of the [agent template]
-
-[agent template]: https://github.com/rust-lang/simpleinfra/blob/74bbf479de315fb5c5d6e97832fc3dc9b12e4cab/terraform/crater/agent.tf#L139
-[Dockerfile]: https://github.com/rust-lang/crater/blob/master/Dockerfile
-[Cargo.lock]: https://github.com/rust-lang/crater/blob/master/Cargo.lock
-[workflows]: https://github.com/rust-lang/crater/tree/master/.github/workflows
 [rust-lang/crater]: https://github.com/rust-lang/crater
 [terraform/crater]: https://github.com/rust-lang/simpleinfra/tree/master/terraform/crater

@@ -7,6 +7,8 @@ The `crater` service is managed in the [terraform/crater] module, while the app 
 You can find the detailed `crater` docs
 [here](https://github.com/rust-lang/crater/tree/master/docs).
 
+[crater.rust-lang.org] shows the status of the running experiments and the agents.
+
 ## Architecture
 
 The crater project contains the following components:
@@ -49,5 +51,6 @@ And the bot will reply to you.
 
 [How to update Crater](./how-to-update-crater.md)
 
+[crater.rust-lang.org]: https://crater.rust-lang.org
 [rust-lang/crater]: https://github.com/rust-lang/crater
 [terraform/crater]: https://github.com/rust-lang/simpleinfra/tree/master/terraform/crater

@@ -2,6 +2,11 @@
 
 Crater is made of various components, here's how to update them.
 
+> [!NOTE]
+> Before updating crater check on [crater.rust-lang.org] if there are any running
+> experiments.
+> It's preferable to update crater when there are no running experiments.
+
 ## Agents
 
 To update the ubuntu version of the agents, you need to update the [agent template].
@@ -27,6 +32,7 @@ The reason for updating the same VM instead of replacing it, is that crater has 
 SQLite database that would be lost if the VM was replaced.
 
 [agent template]: https://github.com/rust-lang/simpleinfra/blob/74bbf479de315fb5c5d6e97832fc3dc9b12e4cab/terraform/crater/agent.tf#L139
+[crater.rust-lang.org]: https://crater.rust-lang.org
 [Dockerfile]: https://github.com/rust-lang/crater/blob/master/Dockerfile
 [Cargo.lock]: https://github.com/rust-lang/crater/blob/master/Cargo.lock
 [workflows]: https://github.com/rust-lang/crater/tree/master/.github/workflows

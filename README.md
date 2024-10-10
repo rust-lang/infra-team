@@ -33,7 +33,10 @@ flowchart TD
 ## Roadmap
 
 You can see what we are working on and our backlog in our
-[planning](https://github.com/orgs/rust-lang/projects/24/views/1)
+[planning](https://github.com/orgs/rust-lang/projects/24/views/1).
+
+Interested in contributing? Check out our
+[good first issues](https://github.com/orgs/rust-lang/projects/24/views/3)
 
 ## Repositories
 
@@ -42,6 +45,9 @@ Some of the repositories we work on:
 - [simpleinfra](https://github.com/rust-lang/simpleinfra)
 - [bors](https://github.com/rust-lang/bors)
 - [crater](https://github.com/rust-lang/crater)
+
+Check out the full service catalog
+[here](./service-catalog/README.md).
 
 ## Meetings
 

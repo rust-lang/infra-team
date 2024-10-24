@@ -50,6 +50,7 @@ And the bot will reply to you.
 ## How-to Guides
 
 [How to update Crater](./how-to-update-crater.md)
+[How to test Crater](./how-to-test-crater.md)
 
 [crater.rust-lang.org]: https://crater.rust-lang.org
 [rust-lang/crater]: https://github.com/rust-lang/crater

@@ -5,7 +5,9 @@ available closer to the user.
 
 ## Fastly Exporter
 
-[terraform/fastly-exporter] deploys the fastly-exporter, which makes the [Fastly Real-time analytics](https://www.fastly.com/documentation/reference/api/metrics-stats/realtime/) data available to Prometheus.
+[terraform/fastly-exporter] deploys the fastly-exporter, which makes the
+[Fastly Real-time analytics](https://www.fastly.com/documentation/reference/api/metrics-stats/realtime/)
+data available to Prometheus.
 
 ## Team members
 

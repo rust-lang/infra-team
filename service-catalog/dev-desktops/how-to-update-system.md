@@ -38,4 +38,5 @@ To update the Ubuntu version:
 2. Run `sudo do-release-upgrade` to upgrade to the next LTS version.
 3. The system should reboot automatically after the upgrade.
 4. Apply the Ansible playbook again to ensure it still works
-5. Reboot the machine to ensure all services are running with the latest versions: `sudo reboot now`
+5. Reboot the machine to ensure all services are running with the latest
+   versions: `sudo reboot now`

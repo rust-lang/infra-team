@@ -2,12 +2,14 @@
 
 `Crater` is a tool to run experiments across parts of the Rust ecosystem.
 
-The `crater` service is managed in the [terraform/crater] module, while the app is in the [rust-lang/crater] repository.
+The `crater` service is managed in the [terraform/crater] module, while the app
+is in the [rust-lang/crater] repository.
 
 You can find the detailed `crater` docs
 [here](https://github.com/rust-lang/crater/tree/master/docs).
 
-[crater.rust-lang.org] shows the status of the running experiments and the agents.
+[crater.rust-lang.org] shows the status of the running experiments and the
+agents.
 
 ## Architecture
 
@@ -28,9 +30,9 @@ graph LR
 
 The agents and crater communicate over HTTP.
 
-The agents communicate to crater their capabilities
-(e.g. "windows" or "hard-drive-bigger-than-1TB") and crater assigns experiments
-based on these capabilities.
+The agents communicate to crater their capabilities (e.g. "windows" or
+"hard-drive-bigger-than-1TB") and crater assigns experiments based on these
+capabilities.
 
 ## Bot
 
@@ -41,7 +43,7 @@ is prefixed with the bot's username.
 
 For example, to check if the bot is alive you can write this comment:
 
-```
+```shell
 @craterbot ping
 ```
 

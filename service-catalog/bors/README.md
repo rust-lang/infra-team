@@ -5,14 +5,14 @@
 
 - The bors infrastructure is managed in the
   [bors](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/bors)
-  terragrunt module and it's deployed in the
-  `bors-staging` and `bors-prod` account, depending on the environment.
-- The `homu` infrastructure is managed in the
-  [terraform/bors](https://github.com/rust-lang/simpleinfra/tree/master/terraform/bors) module and it is deployed in the legacy account.
+  terragrunt module and is deployed in the `bors-staging` and `bors-prod`
+  account, depending on the environment.
+- The `homu` infrastructure is managed in the [terraform/bors](https://github.com/rust-lang/simpleinfra/tree/master/terraform/bors)
+  module and is deployed in the legacy account.
 
 Bors is deployed as a [Fargate](https://aws.amazon.com/fargate/) service
-([ECS](https://aws.amazon.com/ecs/)) in the `us-east-2` region.
-Bors uses an RDS PostgreSQL database.
+([ECS](https://aws.amazon.com/ecs/)) in the `us-east-2` region. Bors uses an RDS
+PostgreSQL database.
 
 To deploy a new version, the
 [deployment](https://github.com/rust-lang/bors/blob/main/.github/workflows/deploy.yml)

@@ -1,19 +1,19 @@
 # Rustc perf
 
-[Rustc perf] is a website that tracks the performance of
-`rustc` over time.
+[Rustc perf] is a website that tracks the performance of `rustc` over time.
 
-It is deployed using [terraform/rustc-perf].
-The app is in the [rustc-perf]
-repository and it's maintained by the [wg-compiler-performance] team.
+It is deployed using [terraform/rustc-perf]. The app is in the [rustc-perf]
+repository and is maintained by the [wg-compiler-performance] team.
 
-It uses an ECR repository to store the Docker image and an ECS service to run it.
+It uses an ECR repository to store the Docker image and an ECS service to run
+it.
 
 It also uses the `shared` db of [rds-databases] and the `rustc-perf` S3 bucket.
 
-The collector (the machine that runs the benchmarks) is a dedicated physical server running at [Hetzner].
-Rustc-perf runs on a bare-metal server because we need predictable performance.
-Otherwise, test results might be spoiled by noisy neighbors in the cloud.
+The collector (the machine that runs the benchmarks) is a dedicated physical
+server running at [Hetzner]. Rustc-perf runs on a bare-metal server because we
+need predictable performance. Otherwise, test results might be spoiled by noisy
+neighbors in the cloud.
 
 ## Versions
 

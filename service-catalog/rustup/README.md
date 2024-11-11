@@ -14,5 +14,6 @@ The Infra team maintains the infrastructure for Rustup:
   to this S3 bucket.
 - [win-rustup-rs](https://github.com/rust-lang/simpleinfra/tree/master/terragrunt/modules/win-rustup-rs)
   terragrunt module.
-  A Cloudfront distribution of the `/rustup/dist` path of the `static-rust-lang-org` bucket providing convenient short for downloading
+  A Cloudfront distribution of the `/rustup/dist` path of the
+  `static-rust-lang-org` bucket providing convenient short for downloading
   rustup on Windows.

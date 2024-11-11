@@ -4,7 +4,7 @@ name: Markdown
 "on":
   push:
     branches:
-      - main
+      - master
   pull_request:
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
       - name: Run markdownlint
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          files: "**.md"
+          files: "**/*.md"
 
   style:
     name: Check style

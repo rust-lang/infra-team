@@ -1,7 +1,8 @@
 # Monitorbot
 
 Bot that monitors various APIs and services that the infrastructure team uses.
-For example, it's used to check if GitHub tokens are getting close to their rate limits.
+For example, it's used to check if GitHub tokens are getting close to their rate
+limits.
 
 [terraform/monitorbot] deploys the monitorbot as an ECS app.
 

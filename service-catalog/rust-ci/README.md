@@ -15,3 +15,7 @@ The [terraform/rust-ci] module provisions some resources used by the CI:
 [terraform/rust-ci]: https://github.com/rust-lang/simpleinfra/tree/master/terraform/rustc-ci
 [rust-lang/rust]: https://github.com/rust-lang/rust/
 [workflows]: https://github.com/rust-lang/rust/tree/master/.github/workflows
+
+## How-to Guides
+
+- [How to monitor CI time](./how-to-monitor-ci-time.md)

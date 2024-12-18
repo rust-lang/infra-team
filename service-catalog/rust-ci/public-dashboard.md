@@ -8,10 +8,5 @@ to monitor the Rust CI.
 This dashboard is just a clone of the Datadog CI
 [dashboard](https://docs.datadoghq.com/continuous_integration/?site=us).
 
-These are some useful panels from the dashboard:
-
-- Pipeline duration: check how long the auto builds takes to run.
-- Top slowest jobs: check which jobs are taking the longest to run.
-- Change in median job duration: check what jobs are slowest than before. Useful
-  to detect regressions.
-- Top failed jobs: check which jobs are failing the most.
+This dashboard is also documented in the
+[rustc-dev-guide](https://rustc-dev-guide.rust-lang.org/tests/ci.html#public-ci-dashboard).

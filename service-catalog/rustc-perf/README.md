@@ -1,6 +1,8 @@
 # Rustc perf
 
 [Rustc perf] is a website that tracks the performance of `rustc` over time.
+It hosts various dashboards, charts and comparisons used to analyze
+how individual changes (pull requests) to the compiler affect its performance.
 
 It is deployed using [terraform/rustc-perf]. The app is in the [rustc-perf]
 repository and is maintained by the [wg-compiler-performance] team.
@@ -14,6 +16,8 @@ The collector (the machine that runs the benchmarks) is a dedicated physical
 server running at [Hetzner]. Rustc-perf runs on a bare-metal server because we
 need predictable performance. Otherwise, test results might be spoiled by noisy
 neighbors in the cloud.
+
+For more information, see the [rustc-perf docs].
 
 ## Versions
 
@@ -35,3 +39,4 @@ These are the versions we need to keep up-to-date:
 [Cargo.lock]: https://github.com/rust-lang/rustc-perf/blob/master/Cargo.lock
 [package-lock.json]: https://github.com/rust-lang/rustc-perf/blob/master/site/frontend/package-lock.json
 [workflows]: https://github.com/rust-lang/rustc-perf/tree/master/.github/workflows
+[rustc-perf docs]: https://github.com/rust-lang/rustc-perf/tree/master/docs

@@ -12,5 +12,5 @@ it might provide a better uptime than the original source.
 ## How to mirror a new file
 
 To mirror a new file, add it to the
-[ci-mirrors](https://github.com/rust-lang/ci-mirrors/blob/fc9221d92847e49c277a2099a263cc902699fa9b/files.toml#L1)
+[ci-mirrors](https://github.com/rust-lang/ci-mirrors/tree/main/files)
 repository.

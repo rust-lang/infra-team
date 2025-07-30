@@ -53,6 +53,13 @@ Check out the full service catalog
 
 - [Weekly Team Meeting](./meetings/README.md)
 
+## Talks
+
+Talks given by team members about the team's work:
+
+- [RustConf 2023 - Infrastructure for Rust](https://www.youtube.com/watch?v=luBJvcGg9HQ)
+- [RustNation 2024 - Rust Infrastructure: What it takes to keep Rust running](https://www.youtube.com/watch?v=GnLZMJ2r7sk)
+
 ## License
 
 The contents of this repository are dual-licensed under the terms of the

@@ -19,6 +19,7 @@ how-to guides, explanations, and reference documentation.
 - [discord-mods-bot](./discord-mods-bot/README.md) _(decommissioned)_
 - [dns](./dns/README.md)
 - [docs-rs](./dns/README.md)
+- [IBM runners](./ibm-runners/README.md)
 - [infra-smoke-tests](./dns/README.md)
 - [monitorbot](./monitorbot/README.md)
 - [playground](./playground/README.md)

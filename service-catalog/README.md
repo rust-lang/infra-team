@@ -16,7 +16,7 @@ how-to guides, explanations, and reference documentation.
 - [crater](./crater/README.md)
 - [crates-io](./crates-io/README.md)
 - [dev-desktops](./dev-desktops/README.md)
-- [discord-mods-bot](./discord-mods-bot/README.md)
+- [discord-mods-bot](./discord-mods-bot/README.md) _(decommissioned)_
 - [dns](./dns/README.md)
 - [docs-rs](./dns/README.md)
 - [infra-smoke-tests](./dns/README.md)

@@ -1,5 +1,9 @@
 # Rust assets backup
 
+> [!NOTE]
+> GCP backups are still under development.
+> Not everything documented here is implemented.
+
 ## Summary
 
 In GCP (Google Cloud Platform) we keep offsite backups for both Rust releases and crates

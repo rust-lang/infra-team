@@ -135,3 +135,4 @@ The `x-cache` header should now be a `MISS` and the `age` header should be `0`.
 [rust-lang/simpleinfra]: https://github.com/rust-lang/simpleinfra
 [surrogate keys]: https://www.fastly.com/documentation/guides/concepts/edge-state/cache/purging/#surrogate-key-purge
 [url purges]: https://www.fastly.com/documentation/guides/concepts/edge-state/cache/purging/#url-purge
+[Fastly]: ./README.md

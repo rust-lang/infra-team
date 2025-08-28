@@ -13,6 +13,11 @@ The side panel provides access to various features and settings:
 - _CDN_: Services that runs with [vcl]
 - _Compute_: Services that runs with the Fastly's edge [Compute Platform].
 - _Account_: Token configuration and billing information.
+- _Security_: Security options we can enable. Under "TLS management" you can see
+  the TLS certificates for our domains.
+  The certificates are managed and renewed by fastly. We use GlobalSign
+  certificates instead of Let's Encrypt to avoid incompatibilities between older
+  devices and the Let's Encrypt certificate chain.
 
 ## Fiddle
 

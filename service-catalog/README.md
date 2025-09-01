@@ -24,6 +24,7 @@ how-to guides, explanations, and reference documentation.
 - [monitorbot](./monitorbot/README.md)
 - [playground](./playground/README.md)
 - [releases](./releases/README.md)
+- [rfcbot](./rfcbot/README.md)
 - [rust-ci](./rust-ci/README.md)
 - [rust-forge](./rust-forge/README.md)
 - [rust-log-analyzer](./rust-log-analyzer/README.md)

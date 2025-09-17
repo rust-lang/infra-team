@@ -41,17 +41,29 @@ The Rust infrastructure should be:
 
 - _Reliable_: The infrastructure should be accessible when needed and should
   work as expected.
-- _Secure_: It should be secure to interact with the infrastructure.
+- _Observable_: The infrastructure should be observable when needed and should
+  provide insights into its performance and usage.
+- _Secure_: As Rust is used more widely and in more critical applications,
+  security becomes ever more important.
+  It should be secure to interact with the infrastructure.
+  We need to proactively improve our infrastructure and processes to
+  address threats.
 - _Fast_: We want to optimize our infrastructure so that it's as fast as
   possible, to optimize the developer experience.
-- _Financially responsible_: Even though parts of the infrastructure are
-  sponsored, we want to optimize
+- _Financially responsible_: We need to ensure that the Rust Foundation and its
+  sponsors can cover the costs of our current and future infrastructure needs.
+  This requires us to understand our cost structure and trends, and take
+  measures to ensure we grow sustainably.
+  Also, even though parts of the infrastructure are sponsored, to guarantee the
+  long-term sustainability of the sponsorships, we want to optimize
   our infrastructure so that we ask the least amount of money possible.
 - _Easy to maintain_: Maintaining our infrastructure should be as easy as
   possible. E.g.:
-  - we want to automate as much as possible the maintenance of
-    the infrastructure, so that maintainers can focus on more important things.
+  - we want to automate as much as possible the maintenance and the operational
+    processes of the infrastructure, so that maintainers can focus on more
+    important things.
   - we want to refactor our code so that it's easier to read and edit.
+  - we want to document our infrastructure so that it's easier to understand.
 - _Easy to contribute to_: We want external contributors to be able to
   contribute to the infrastructure easily.
 
@@ -60,9 +72,11 @@ We have the following goals for the infrastructure team:
 - _Sustainability_: We want to make sure that the infrastructure team is
   sustainable in the long term. Members of the infrastructure team should have
   a good time while working here.
-- _Growth_: We want to grow the infrastructure team, so that we can dedicate
+- _Growth_: As Rust grows, the workload of the infra team increases as well.
+  We want to grow the infrastructure team, so that we can dedicate
   more time to the team's responsibilities.
-  We want the Rust community to be aware of what we are working on, so that
+  We want want to provide a healthy work environment and inform the Rust
+  community of what we are working on, so that
   interested people can contribute to tasks they are interested in.
   If we manage to offer them a good experience
   (e.g. they work on something they enjoy, with high impact, while learning new

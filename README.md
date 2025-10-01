@@ -22,11 +22,11 @@ flowchart TD
 
 <!-- markdownlint-disable MD013 -->
 
-| Role                   | Team member                                            |
-| ---------------------- | ------------------------------------------------------ |
-| Co-lead                | [@jdno](https://github.com/jdno)                       |
-| Co-lead                | [@shepmaster](https://github.com/shepmaster)           |
-| Council Representative | [@Mark-Simulacrum](https://github.com/mark-simulacrum) |
+| Role                   | Team member                                  |
+| ---------------------- | -------------------------------------------- |
+| Co-lead                | [@jdno](https://github.com/jdno)             |
+| Co-lead                | [@shepmaster](https://github.com/shepmaster) |
+| Council Representative | [@Kobzol](https://github.com/Kobzol)         |
 
 <!-- markdownlint-enable MD013 -->
 

@@ -32,6 +32,7 @@ how-to guides, explanations, and reference documentation.
 - [rustup](./rustup/README.md)
 - [sync-team](./sync-team/README.md)
 - [team-member-access](./team-member-access/README.md)
+- [Internal-facing infrastructure announcements](./internal-facing-infra-announcements/README.md)
 
 ## External Services
 

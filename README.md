@@ -41,6 +41,13 @@ You can see what we are working on and our backlog in our
 Interested in contributing? Check out our
 [good first issues](https://github.com/orgs/rust-lang/projects/24/views/3)
 
+## Zulip
+
+We have two Zulip channels:
+
+- [t-infra](https://rust-lang.zulipchat.com/#narrow/channel/242791-t-infra) for general discussions
+- [t-infra/announcements](https://forge.rust-lang.org/infra/docs/internal-announcements.html) for important announcements
+
 ## Repositories
 
 Some of the repositories we work on:

@@ -9,13 +9,16 @@ documentation about the team's processes and services.
 
 ## Structure
 
-The [Infrastructure Team] has three sub-teams:
+The [Infrastructure Team] has several sub-teams:
 
 ```mermaid
 flowchart TD
   infra(Infrastructure team)---bootstrap(Bootstrap team)
   infra---release(Release team)
   infra---triagebot(Triagebot team)
+  infra---docker(Docker team)
+  infra---bors(Bors team)
+  infra---internal_sites(Internal sites team)
 ```
 
 ## Functions

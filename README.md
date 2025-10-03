@@ -69,6 +69,7 @@ Talks given by team members about the team's work:
 
 - [RustConf 2023 - Infrastructure for Rust](https://www.youtube.com/watch?v=luBJvcGg9HQ)
 - [RustNation 2024 - Rust Infrastructure: What it takes to keep Rust running](https://www.youtube.com/watch?v=GnLZMJ2r7sk)
+- [RustConf 2025 - How We Made the Rust CI 75% Cheaper](https://www.youtube.com/watch?v=Gzk4uG-YzJI)
 
 ## Interviews
 

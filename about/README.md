@@ -25,7 +25,6 @@ The stakeholders of the infrastructure team are:
   section.
 - _Rust Foundation_: They cover the costs of the infrastructure that is not
   sponsored.
-
 - ..and more
 
 ## Values

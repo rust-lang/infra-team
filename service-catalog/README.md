@@ -15,6 +15,7 @@ how-to guides, explanations, and reference documentation.
 - [ci-mirrors](./ci-mirrors/README.md)
 - [crater](./crater/README.md)
 - [crates-io](./crates-io/README.md)
+- [crates-io-auth-action](./crates-io-auth-action/README.md)
 - [dev-desktops](./dev-desktops/README.md)
 - [discord-mods-bot](./discord-mods-bot/README.md) _(decommissioned)_
 - [dns](./dns/README.md)

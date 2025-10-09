@@ -17,6 +17,15 @@ The stakeholders of the infrastructure team are:
   - They use bors to merge their changes.
 - _Rust project_: They rely on the Rust infrastructure (such as bots) to
   improve Rust.
+- _Infra sponsors_: Companies giving us free credits to use their services.
+  We need to keep sponsorships sustainable, i.e. be responsible with
+  cloud resources.
+  You can see the list of the infrastructure sponsors in the Rust Foundation
+  [website](https://rustfoundation.org/infrastructure/donors) in the donors
+  section.
+- _Rust Foundation_: They cover the costs of the infrastructure that is not
+  sponsored.
+
 - ..and more
 
 ## Values

@@ -14,8 +14,8 @@ Here's how the planning process works:
 
 - At the begin of the quarter, we publish a blog post in the
   [Inside Rust](https://blog.rust-lang.org/inside-rust/) blog to share
-  what we've accomplished in the last quarter and what we planned for this
-  quarter.
+  what `t-infra` and (optionally) the subteams accomplished in the last quarter
+  and what we planned for this quarter.
 - During the quarter, we execute the work planned.
 - Before the end of the quarter, we plan the work for the next quarter.
 
@@ -25,6 +25,20 @@ Each entry in the plan has the following fields:
 - _Tracking issue_: link to GitHub issue.
 - _Description_: a brief description of the work
   (full details should be in the GitHub issue).
+
+## Blog post
+
+Here's the process to publish the blog post:
+
+1. Write a draft of the blog post as a PR to
+   [rust-lang/blog.rust-lang.org](https://github.com/rust-lang/blog.rust-lang.org).
+2. Share the draft in the [t-infra](https://rust-lang.zulipchat.com/#narrow/channel/242791-t-infra)
+   Zulip channel to ask members of the infra team and subteams to add/edit items.
+   Ping the subteams in the Zulip topic because they might not follow the channel.
+
+Previous blog posts:
+
+- [2025 Q3/Q4](https://blog.rust-lang.org/inside-rust/2025/10/16/infrastructure-team-q3-recap-and-q4-plan/)
 
 ## Are volunteers expected to own items in the plan?
 

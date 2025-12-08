@@ -33,6 +33,23 @@ how-to guides, explanations, and reference documentation.
 - [rustup](./rustup/README.md)
 - [sync-team](./sync-team/README.md)
 - [team-member-access](./team-member-access/README.md)
+- [triagebot](./triagebot/README.md)
+
+### Tracking websites
+
+- The state of tools included with Rust are tracked on the
+  [toolstate page](https://rust-lang-nursery.github.io/rust-toolstate/).
+  When each PR is merged via CI, the status of each tool is recorded in a JSON
+  file and stored in the
+  [toolstate repo](https://github.com/rust-lang-nursery/rust-toolstate).
+  For further information, see the
+  [toolstate system documentation][toolstate-docs].
+- The [rustup components history][rustup-components-history] tracks
+  the status of every rustup component for every platform over time. See the
+  repository for more information.
+
+[rustup-components-history]: https://rust-lang.github.io/rustup-components-history/
+[toolstate-docs]: (https://forge.rust-lang.org/infra/toolstate.html)
 
 ## External Services
 

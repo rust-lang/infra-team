@@ -19,9 +19,9 @@ how-to guides, explanations, and reference documentation.
 - [dev-desktops](./dev-desktops/README.md)
 - [discord-mods-bot](./discord-mods-bot/README.md) _(decommissioned)_
 - [dns](./dns/README.md)
-- [docs-rs](./dns/README.md)
+- [docs-rs](./docs-rs/README.md)
 - [IBM runners](./ibm-runners/README.md)
-- [infra-smoke-tests](./dns/README.md)
+- [infra-smoke-tests](./infra-smoke-tests/README.md)
 - [monitorbot](./monitorbot/README.md)
 - [playground](./playground/README.md)
 - [releases](./releases/README.md)

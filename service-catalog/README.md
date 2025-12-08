@@ -49,7 +49,7 @@ how-to guides, explanations, and reference documentation.
   repository for more information.
 
 [rustup-components-history]: https://rust-lang.github.io/rustup-components-history/
-[toolstate-docs]: (https://forge.rust-lang.org/infra/toolstate.html)
+[toolstate-docs]: https://forge.rust-lang.org/infra/toolstate.html
 
 ## External Services
 

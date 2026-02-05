@@ -34,6 +34,7 @@ how-to guides, explanations, and reference documentation.
 - [sync-team](./sync-team/README.md)
 - [team-member-access](./team-member-access/README.md)
 - [triagebot](./triagebot/README.md)
+- [users.rust-lang.org](./users-rust-lang-org/README.md)
 
 ### Tracking websites
 

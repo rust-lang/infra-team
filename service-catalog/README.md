@@ -56,5 +56,6 @@ how-to guides, explanations, and reference documentation.
 
 - [Datadog](./datadog/README.md)
 - [Fastly](./fastly/README.md)
+- [Renovate](./renovate/README.md)
 
 [diataxis]: https://diataxis.fr/

@@ -12,8 +12,8 @@ it.
 
 It also uses the `shared` db of [rds-databases] and the `rustc-perf` S3 bucket.
 
-The collector (the machine that runs the benchmarks) is a dedicated physical
-server running at [Hetzner]. Rustc-perf runs on a bare-metal server because we
+The collectors (the machines that run the benchmarks) are dedicated physical
+servers running at [Hetzner]. The collectors run on a bare-metal server because we
 need predictable performance. Otherwise, test results might be spoiled by noisy
 neighbors in the cloud.
 
@@ -39,4 +39,4 @@ These are the versions we need to keep up-to-date:
 [Cargo.lock]: https://github.com/rust-lang/rustc-perf/blob/master/Cargo.lock
 [package-lock.json]: https://github.com/rust-lang/rustc-perf/blob/master/site/frontend/package-lock.json
 [workflows]: https://github.com/rust-lang/rustc-perf/tree/master/.github/workflows
-[rustc-perf docs]: https://github.com/rust-lang/rustc-perf/tree/master/docs
+[rustc-perf docs]: https://github.com/rust-lang/rustc-perf/tree/master/docs/deployment.md

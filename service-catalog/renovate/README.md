@@ -3,6 +3,8 @@
 The user-facing documentation of Renovate is documented in the
 [Rust Forge](https://forge.rust-lang.org/infra/docs/renovate.html).
 
+You can find our org presets at [rust-lang/renovate](https://github.com/rust-lang/renovate).
+
 ## Troubleshooting
 
 If Renovate doesn't work on a repository, infra admins can:

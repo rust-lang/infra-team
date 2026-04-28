@@ -48,6 +48,11 @@ We have two Zulip channels:
 - [t-infra](https://rust-lang.zulipchat.com/#narrow/channel/242791-t-infra) for general discussions
 - [t-infra/announcements](https://forge.rust-lang.org/infra/docs/internal-announcements.html) for important announcements
 
+We prefer discussions to happen in public, in the `t-infra` channel, so that context is shared among
+the team.
+If you need to discuss something privately because it contains sensitive information,
+write a DM or create a private zulip channel, inviting as many people as possible from the team.
+
 ## Repositories
 
 Some of the repositories we work on:

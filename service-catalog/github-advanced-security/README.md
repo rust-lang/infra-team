@@ -4,7 +4,7 @@ We adopt [Github Advanced Security] features to further enhance `rust-lang` Gith
 
 ## Secrets Protection
 
-So far, we are enforce [Github Secret Protection] to all non-private, non-forks repositories in `rust-lang`,
+We enabled [Github Secret Protection] to all non-private, non-forks repositories in `rust-lang`,
 with the following configuration:
 
 - validity checks against all available [Secret Scanning partners] by default

@@ -76,6 +76,8 @@ Talks given by team members about the team's work:
 - [RustNation 2024 - Rust Infrastructure: What it takes to keep Rust running](https://www.youtube.com/watch?v=GnLZMJ2r7sk)
 - [RustConf 2025 - How We Made the Rust CI 75% Cheaper](https://www.youtube.com/watch?v=Gzk4uG-YzJI)
 - [RustLab 2025 - 1.5 years in the infra team: what we cooked and what's next](https://www.youtube.com/watch?v=f1vcA29l1z0)
+- [RustWeek 2026 - Rewriting bors: how hard can it be?](https://www.youtube.com/watch?v=NhTwLwznok8)
+- [RustWeek 2026 - Overcoming GitHub shortcomings with Triagebot](https://www.youtube.com/watch?v=7U-2Pxc3HQ8)
 
 ## Interviews
 

@@ -57,5 +57,6 @@ how-to guides, explanations, and reference documentation.
 - [Datadog](./datadog/README.md)
 - [Fastly](./fastly/README.md)
 - [Renovate](./renovate/README.md)
+- [Ubuntu Pro](./ubuntu-pro/README.md)
 
 [diataxis]: https://diataxis.fr/

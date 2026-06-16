@@ -40,8 +40,10 @@ able to login via [Ubuntu One](https://login.ubuntu.com/).
 > [!NOTE]
 > Do not share the Ubuntu Pro token publicly.
 
-For AWS, check the article
-[How to upgrade existing Ubuntu LTS instances to Ubuntu Pro in AWS](https://ubuntu.com/blog/upgrade-your-existing-ubuntu-lts-instances-to-ubuntu-pro-in-aws).
+> [!NOTE]
+> For AWS, don't use the AWS License Manager process documented in the article
+> [How to upgrade existing Ubuntu LTS instances to Ubuntu Pro in AWS](https://ubuntu.com/blog/upgrade-your-existing-ubuntu-lts-instances-to-ubuntu-pro-in-aws).
+> Otherwise, we would pay for Ubuntu Pro with AWS credits.
 
 [ubuntu pro]: https://ubuntu.com/pro
 [ubuntu pro dashboard]: https://ubuntu.com/pro/dashboard

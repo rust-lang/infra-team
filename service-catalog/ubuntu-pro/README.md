@@ -13,6 +13,9 @@
 
 Security updates are applied by the periodic `unattended-upgrades`.
 
+> [!NOTE]
+> ARM64 Livepatch coverage starts with Ubuntu 26.04.
+
 You can learn more in the [Ubuntu Pro documentation].
 
 ## Donation

@@ -11,6 +11,8 @@
 - It provides LTS security maintenance for up to 10 years. For example, Ubuntu
   18.04 LTS is supported by Ubuntu Pro until 2028.
 
+Security updates are applied by the periodic `unattended-upgrades`.
+
 You can learn more in the [Ubuntu Pro documentation].
 
 ## Donation

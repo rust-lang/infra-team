@@ -47,6 +47,25 @@ able to login via [Ubuntu One](https://login.ubuntu.com/).
 > [How to upgrade existing Ubuntu LTS instances to Ubuntu Pro in AWS](https://ubuntu.com/blog/upgrade-your-existing-ubuntu-lts-instances-to-ubuntu-pro-in-aws).
 > Otherwise, we would pay for Ubuntu Pro with AWS credits.
 
+## Troubleshooting
+
+### Kernel not covered by Livepatch
+
+When running `pro status`, you might see a warning similar to this:
+
+```
+The current kernel (6.14.0-1018-aws, x86_64) is not covered by livepatch.
+Covered kernels are listed here: https://ubuntu.com/security/livepatch/docs/kernels
+```
+
+To fix this, try to update the kernel by running the following:
+
+```bash
+sudo apt update
+sudo apt full-upgrade
+sudo reboot
+```
+
 [ubuntu pro]: https://ubuntu.com/pro
 [ubuntu pro dashboard]: https://ubuntu.com/pro/dashboard
 [ubuntu pro documentation]: https://documentation.ubuntu.com/pro/

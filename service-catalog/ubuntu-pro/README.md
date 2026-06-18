@@ -23,11 +23,6 @@ You can learn more in the [Ubuntu Pro documentation].
 Canonical donated 25 Ubuntu Pro subscriptions to the Rust Foundation in June 2026,
 which expire on 2027-06-12.
 
-## Useful commands
-
-- `pro status`: shows the status of the Ubuntu Pro subscription on a machine.
-- `pro security-status`: lists available security updates for the system.
-
 ## Onboard a new admin to the dashboard
 
 An existing admin can invite a new admin via the [Landscape](https://landscape.canonical.com/new_dashboard)
@@ -36,7 +31,9 @@ organization settings.
 The new admin will receive an email invitation to join the organization, and they will be
 able to login via [Ubuntu One](https://login.ubuntu.com/).
 
-## Setup notes
+## How to setup
+
+### Manual setup
 
 - Use the [Ubuntu Pro dashboard] to view subscriptions and access the Ubuntu
   Pro token.
@@ -49,6 +46,17 @@ able to login via [Ubuntu One](https://login.ubuntu.com/).
 > For AWS, don't use the AWS License Manager process documented in the article
 > [How to upgrade existing Ubuntu LTS instances to Ubuntu Pro in AWS](https://ubuntu.com/blog/upgrade-your-existing-ubuntu-lts-instances-to-ubuntu-pro-in-aws).
 > Otherwise, we would pay for Ubuntu Pro with AWS credits.
+
+### Ansible
+
+If the machine is managed with Ansible, it uses Ubuntu Pro by default, thanks
+to the [ubuntu-pro task](https://github.com/rust-lang/simpleinfra/blob/b0fc6ade93e07f391df24dbbee651061f9f7cd64/ansible/roles/common/tasks/ubuntu-pro.yml)
+in the `common` role.
+
+## How to verify setup
+
+1. Run `pro status` and check that the services `esm-apps`, `esm-infra`, and `livepatch` are enabled.
+2. (Optional) Run `pro security-status` to list available security updates for the system.
 
 ## Troubleshooting
 

@@ -19,3 +19,8 @@ The [terraform/rust-ci] module provisions some resources used by the CI:
 ## How-to Guides
 
 - [How to monitor CI time](./how-to-monitor-ci-time.md)
+
+## See also
+
+- [Public dashboard](./public-dashboard.md)
+- [External runners](./external-runners/)

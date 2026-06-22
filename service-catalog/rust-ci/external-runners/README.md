@@ -176,3 +176,8 @@ following process:
    - The CI workflow file passes [zizmor](https://zizmor.sh/) in CI and doesn't
      use write-scoped credentials.
      The infrastructure team is available to help if needed.
+
+> [!NOTE]
+> Since it's hard to debug issues on unconventional architectures,
+> we prefer not adding a runner to `rust-lang/rust` unless there's a proposal for
+> raising the target to Tier 1.

@@ -176,3 +176,12 @@ following process:
    - The CI workflow file passes [zizmor](https://zizmor.sh/) in CI and doesn't
      use write-scoped credentials.
      The infrastructure team is available to help if needed.
+
+> [!NOTE]
+> Since it's hard to debug issues on unconventional architectures,
+> we prefer not adding a runner to `rust-lang/rust` unless there's a proposal for
+> raising the target to Tier 1. Until a target is preparing for Tier 1, there's not much
+> reason for native hardware: tests are generally not going to be run and so
+> cross-compiled builds are sufficient.
+>
+> See also [target policy](https://doc.rust-lang.org/nightly/rustc/target-tier-policy.html).

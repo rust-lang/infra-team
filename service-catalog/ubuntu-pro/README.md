@@ -31,6 +31,17 @@ organization settings.
 The new admin will receive an email invitation to join the organization, and they will be
 able to login via [Ubuntu One](https://login.ubuntu.com/).
 
+### Landscape
+
+The Landscape is a centralized Ubuntu fleet management dashboard that allows to track what software
+runs on each machine and whether it needs security updates.
+
+We are not using the Landscape at the moment (it shows zero instances configured)
+and there are no current plans to use it in the future (it's another installation process with
+respect to ubuntu pro).
+
+For more information, see the [Landscape docs](https://ubuntu.com/landscape).
+
 ## How to setup
 
 ### Manual setup

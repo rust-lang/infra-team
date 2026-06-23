@@ -17,6 +17,11 @@ This document explains:
   experiments move into `rust-lang/rust`.
 - How to configure external runners.
 
+If you want to check what runners are available or you are only interested in
+_using external runners_ instead of _configuring them_, read the
+[forge](https://forge.rust-lang.org/infra/docs/external-ci-runners.html)
+documentation instead of this document.
+
 ## GitHub integration
 
 The Infrastructure team accepts external runners in Rust Project CI only if
@@ -176,6 +181,8 @@ following process:
    - The CI workflow file passes [zizmor](https://zizmor.sh/) in CI and doesn't
      use write-scoped credentials.
      The infrastructure team is available to help if needed.
+5. Document the new runners in the
+   [forge](https://forge.rust-lang.org/infra/docs/external-ci-runners.html).
 
 > [!NOTE]
 > Since it's hard to debug issues on unconventional architectures,

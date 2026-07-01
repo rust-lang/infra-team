@@ -24,6 +24,7 @@ We use the following integrations:
 ## Explanations
 
 - [About Permissions](./about-permissions.md)
+- [Code Security](./code-security.md)
 
 [datadog]: https://www.datadoghq.com/
 [terraform/team-members-datadog]: https://github.com/rust-lang/simpleinfra/tree/master/terraform/team-members-datadog

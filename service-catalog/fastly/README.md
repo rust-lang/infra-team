@@ -30,6 +30,7 @@ These are the versions we need to keep up-to-date:
 ## How-to Guides
 
 - [How to test cache invalidations](./how-to-test-cache-invalidations.md)
+- [How to add a rate limit](./how-to-rate-limit.md)
 
 [content delivery network]: https://en.wikipedia.org/wiki/Content_delivery_network
 [fastly]: https://www.fastly.com/

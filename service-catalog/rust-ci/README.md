@@ -24,3 +24,4 @@ The [terraform/rust-ci] module provisions some resources used by the CI:
 
 - [Public dashboard](./public-dashboard.md)
 - [External runners](./external-runners/)
+- [Postmortems](./post-mortems/)

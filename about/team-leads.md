@@ -94,8 +94,9 @@ This has a few implications for rotations:
 - If a co-lead's employment with the Foundation ends during their term,
   and the other co-lead is not a Foundation employee, they hand over the
   role to a Foundation employee before the end of their term. The regular
-  selection process applies, and the departing co-lead stays in the role
-  until their successor takes over.
+  selection process applies, and because it takes several weeks, the
+  departing co-lead stays in the role until their successor takes over, so
+  that the seat is never left vacant.
 
 ## Selection
 

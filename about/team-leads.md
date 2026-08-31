@@ -83,9 +83,8 @@ the Rust Foundation.
 This has a few implications for rotations:
 
 - One of the two seats is effectively reserved for a Foundation employee.
-  With staggered two-year terms, the rotations alternate: one year, the
-  Foundation-employed co-lead rotates, and the next year, the open seat
-  does.
+  Because the terms are staggered, the rotations alternate: one year the
+  Foundation-employed co-lead rotates, the next year the open seat does.
 - When a rotation would otherwise leave the team without a
   Foundation-employed co-lead, only Foundation employees can be candidates
   for the seat.

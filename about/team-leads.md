@@ -57,8 +57,8 @@ The two-year term is a target, not a hard limit:
   role or leave it vacant.
 - A co-lead can step down before the end of their term. Life happens, and
   wellbeing comes first. In that case, the selection process starts
-  immediately, and the length of the successor's term can be adjusted to
-  re-establish the staggering.
+  immediately, and the length of the successor's term can be adjusted so
+  that the two terms end in different years again.
 
 ## Eligibility
 

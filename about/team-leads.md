@@ -125,9 +125,8 @@ outgoing co-lead:
   external contacts, and
 - hands over recurring duties such as running the team meeting.
 
-The rotation is completed by updating the [team database], the README of
-this repository, and announcing the new co-lead in the
-[t-infra/announcements] channel.
+The rotation is completed by updating the [team database] and the README
+of this repository.
 
 The outgoing co-lead returns to being a regular member of the team.
 Stepping down from the role does not mean stepping away from the team.
@@ -136,7 +135,6 @@ Stepping down from the role does not mean stepping away from the team.
 [planning]: ./planning.md
 [rfc 3262]: https://rust-lang.github.io/rfcs/3262-compiler-team-rolling-leads.html
 [rust foundation]: https://rustfoundation.org/
-[t-infra/announcements]: https://forge.rust-lang.org/infra/docs/internal-announcements.html
 [t-infra]: https://rust-lang.zulipchat.com/#narrow/channel/242791-t-infra
 [team database]: https://github.com/rust-lang/team
 [values]: ./README.md#values

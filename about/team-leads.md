@@ -50,6 +50,9 @@ Each co-lead serves a term of two years. The terms are staggered by one
 year, so that only one co-lead rotates at a time and the other provides
 continuity.
 
+Regular rotations take place in March to avoid overlapping with Council
+and Project Director elections.
+
 The two-year term is a target, not a hard limit:
 
 - A co-lead can serve additional terms, for example when no successor is

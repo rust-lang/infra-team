@@ -33,6 +33,9 @@ flowchart TD
 
 <!-- markdownlint-enable MD013 -->
 
+The co-lead role rotates between team members on a regular schedule. The
+process is documented in [Team Leads](./about/team-leads.md).
+
 ## Roadmap
 
 You can see what we are working on and our backlog in our

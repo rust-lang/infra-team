@@ -43,6 +43,9 @@ The infrastructure team members are either:
 There might be shades of gray between these two categories, like people
 paid to work part-time on the infrastructure team.
 
+The team is led by two co-leads. The role and its rotation process are
+documented in [Team Leads](./team-leads.md).
+
 ## Goals
 
 The Rust infrastructure should be:

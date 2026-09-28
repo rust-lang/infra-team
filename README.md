@@ -27,7 +27,7 @@ flowchart TD
 
 | Role                   | Team member                                  |
 | ---------------------- | -------------------------------------------- |
-| Co-lead                | [@jdno](https://github.com/jdno)             |
+| Co-lead                | [@marcoieni](https://github.com/marcoieni)   |
 | Co-lead                | [@shepmaster](https://github.com/shepmaster) |
 | Council Representative | [@Kobzol](https://github.com/Kobzol)         |
 

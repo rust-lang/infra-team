@@ -13,6 +13,7 @@ how-to guides, explanations, and reference documentation.
 - [bastion](./bastion/README.md)
 - [bors](./bors/README.md)
 - [ci-mirrors](./ci-mirrors/README.md)
+- [crabwatch](./crabwatch/README.md)
 - [crater](./crater/README.md)
 - [crates-io](./crates-io/README.md)
 - [crates-io-auth-action](./crates-io-auth-action/README.md)

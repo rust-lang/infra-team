@@ -85,6 +85,7 @@ Talks given by team members about the team's work:
 ## Interviews
 
 - [Jan David Nose @ RustConf 2025](https://www.youtube.com/watch?v=r7i-2wHtNjw)
+- [The Hidden Challenges of Rust Infrastructure](https://serokell.io/blog/the-hidden-challenges-of-rust-infrastructure-interview-with-marco-ieni). Marco Ieni. Oct 2026.
 
 ## License
 

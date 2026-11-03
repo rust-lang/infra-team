@@ -22,3 +22,6 @@ In the future, we might want to create alerts in:
 
 If a crate version is deleted from the crates-io bucket (e.g. for GDPR reasons), an admin needs to delete it from the GCP bucket as well.
 Even though the delete will propagate to GCP, the `soft-delete` feature will preserve the data, so we need to delete it manually.
+
+Before manually deleting backups, check if they contain malicious crate bytes. We intentionally retain malicious bytes
+in all cases, including GDPR takedowns, under security-related exemptions.

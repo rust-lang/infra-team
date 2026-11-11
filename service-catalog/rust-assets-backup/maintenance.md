@@ -25,7 +25,7 @@ In the future, we might want to create alerts in:
 The daily transfer mirrors deletions in the AWS `crates-io` bucket to its GCP backup bucket.
 Deletions in `static-rust-lang-org` are not mirrored.
 
-A mirrored delete doesn't remove data from the backup.
+A mirrored delete doesn't permanently remove data from the backup.
 The GCP buckets have object versioning enabled, so the deleted object becomes a
 noncurrent version that you can still read and restore.
 Noncurrent versions are hidden from normal listings. To list them, run:

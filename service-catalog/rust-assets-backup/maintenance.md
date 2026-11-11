@@ -11,7 +11,7 @@ You can also run the following test:
 
 - Upload a file in an AWS S3 bucket and check that it appears in GCP.
 - Edit the file in AWS and check that you can recover the previous version from GCP.
-- Delete the in AWS and check that you can recover all previous versions from GCP.
+- Delete the file in the AWS `crates-io` bucket and check that you can recover all previous versions from GCP.
 
 In the future, we might want to create alerts in:
 
@@ -20,8 +20,27 @@ In the future, we might want to create alerts in:
 
 ## Backup maintenance 🧹
 
-If a crate version is deleted from the crates-io bucket (e.g. for GDPR reasons), an admin needs to delete it from the GCP bucket as well.
-Even though the delete will propagate to GCP, the `soft-delete` feature will preserve the data, so we need to delete it manually.
+### Deletions
 
-Before manually deleting backups, check if they contain malicious crate bytes. We intentionally retain malicious bytes
-in all cases, including GDPR takedowns, under security-related exemptions.
+The daily transfer mirrors deletions in the AWS `crates-io` bucket to its GCP backup bucket.
+Deletions in `static-rust-lang-org` are not mirrored.
+
+A mirrored delete doesn't remove data from the backup.
+The GCP buckets have object versioning enabled, so the deleted object becomes a
+noncurrent version that you can still read and restore.
+Noncurrent versions are hidden from normal listings. To list them, run:
+
+```sh
+gcloud storage ls --all-versions 'gs://<bucket>/<object>'
+```
+
+### Retention
+
+We keep every object version in the backup buckets forever, including objects
+deleted from AWS because of GDPR requests or other takedowns.
+This is intentional: it's a security retention that is exempt from GDPR.
+
+- Never delete objects or object versions from the backup buckets, including for GDPR requests.
+- Never add a lifecycle rule to the backup buckets.
+
+If a version is deleted by mistake, soft delete keeps it for 90 days, and you can restore it during that time.
